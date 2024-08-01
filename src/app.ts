@@ -12,7 +12,7 @@ const app: Application = express();
 
 //parsers
 app.use(express.json());
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173', 'https://mth-titumir.vercel.app', 'https://my-dashboard-frontend-iota.vercel.app'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:5173', 'https://mth-titumir.vercel.app', 'https://my-dashboard-frontend-iota.vercel.app', 'https://visit-mars-frontend.vercel.app'];
 
 const corsOptions = {
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
