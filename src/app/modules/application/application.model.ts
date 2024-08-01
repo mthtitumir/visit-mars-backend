@@ -81,4 +81,4 @@ applicationSchema.statics.isApplicationExists = async function (field: Record<st
   return await Application.findOne(field);
 };
 
-export const Application = model<TApplication, ApplicationModel>('User', applicationSchema);
+export const Application = model<TApplication, ApplicationModel>('Application', applicationSchema);

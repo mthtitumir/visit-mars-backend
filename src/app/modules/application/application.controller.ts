@@ -14,7 +14,19 @@ const CreateApplication = catchAsync(async (req, res) => {
     });
 });
 
+const GetSingleApplication = catchAsync(async (req, res) => {
+    const result = await ApplicationServices.GetSingleApplication(req?.params.id);
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: 'Application retrieved successfully!',
+        data: result,
+    });
+});
+
 
 export const ApplicationControllers = {
     CreateApplication,
+    GetSingleApplication
 }
